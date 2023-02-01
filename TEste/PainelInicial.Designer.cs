@@ -34,8 +34,10 @@
             // 
             // gameStart
             // 
+            this.gameStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gameStart.BackgroundImage")));
             this.gameStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.gameStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gameStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gameStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameStart.Location = new System.Drawing.Point(244, 217);
             this.gameStart.Name = "gameStart";
@@ -50,10 +52,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 557);
             this.Controls.Add(this.gameStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PainelInicial";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

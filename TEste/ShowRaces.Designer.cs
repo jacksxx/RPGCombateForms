@@ -69,9 +69,9 @@
             this.panel1.Controls.Add(this.btonHumano);
             this.panel1.Controls.Add(this.labelHumano);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 537);
+            this.panel1.Size = new System.Drawing.Size(783, 558);
             this.panel1.TabIndex = 0;
             // 
             // labelCheckHumano
@@ -88,7 +88,7 @@
             this.btonMinotauro.BackColor = System.Drawing.SystemColors.Info;
             this.btonMinotauro.Cursor = System.Windows.Forms.Cursors.Default;
             this.btonMinotauro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btonMinotauro.Location = new System.Drawing.Point(505, 395);
+            this.btonMinotauro.Location = new System.Drawing.Point(593, 446);
             this.btonMinotauro.Name = "btonMinotauro";
             this.btonMinotauro.Size = new System.Drawing.Size(75, 23);
             this.btonMinotauro.TabIndex = 14;
@@ -100,7 +100,7 @@
             // 
             this.btonLefou.BackColor = System.Drawing.SystemColors.Info;
             this.btonLefou.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btonLefou.Location = new System.Drawing.Point(276, 395);
+            this.btonLefou.Location = new System.Drawing.Point(402, 304);
             this.btonLefou.Name = "btonLefou";
             this.btonLefou.Size = new System.Drawing.Size(75, 23);
             this.btonLefou.TabIndex = 13;
@@ -112,7 +112,7 @@
             // 
             this.btonHalfling.BackColor = System.Drawing.SystemColors.Info;
             this.btonHalfling.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btonHalfling.Location = new System.Drawing.Point(64, 395);
+            this.btonHalfling.Location = new System.Drawing.Point(33, 446);
             this.btonHalfling.Name = "btonHalfling";
             this.btonHalfling.Size = new System.Drawing.Size(75, 23);
             this.btonHalfling.TabIndex = 12;
@@ -124,7 +124,7 @@
             // 
             this.btonGoblin.BackColor = System.Drawing.SystemColors.Info;
             this.btonGoblin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btonGoblin.Location = new System.Drawing.Point(543, 155);
+            this.btonGoblin.Location = new System.Drawing.Point(593, 155);
             this.btonGoblin.Name = "btonGoblin";
             this.btonGoblin.Size = new System.Drawing.Size(75, 23);
             this.btonGoblin.TabIndex = 11;
@@ -136,7 +136,7 @@
             // 
             this.btonAnão.BackColor = System.Drawing.SystemColors.Info;
             this.btonAnão.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btonAnão.Location = new System.Drawing.Point(373, 155);
+            this.btonAnão.Location = new System.Drawing.Point(219, 155);
             this.btonAnão.Name = "btonAnão";
             this.btonAnão.Size = new System.Drawing.Size(75, 23);
             this.btonAnão.TabIndex = 10;
@@ -148,7 +148,7 @@
             // 
             this.labelMinotauro.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelMinotauro.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinotauro.Location = new System.Drawing.Point(501, 272);
+            this.labelMinotauro.Location = new System.Drawing.Point(589, 323);
             this.labelMinotauro.Name = "labelMinotauro";
             this.labelMinotauro.Size = new System.Drawing.Size(164, 120);
             this.labelMinotauro.TabIndex = 8;
@@ -158,7 +158,7 @@
             // 
             this.labelLefou.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelLefou.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLefou.Location = new System.Drawing.Point(272, 272);
+            this.labelLefou.Location = new System.Drawing.Point(398, 181);
             this.labelLefou.Name = "labelLefou";
             this.labelLefou.Size = new System.Drawing.Size(164, 120);
             this.labelLefou.TabIndex = 7;
@@ -168,7 +168,7 @@
             // 
             this.labelHalfings.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelHalfings.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHalfings.Location = new System.Drawing.Point(60, 272);
+            this.labelHalfings.Location = new System.Drawing.Point(29, 323);
             this.labelHalfings.Name = "labelHalfings";
             this.labelHalfings.Size = new System.Drawing.Size(164, 120);
             this.labelHalfings.TabIndex = 6;
@@ -178,7 +178,7 @@
             // 
             this.labelGoblin.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelGoblin.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGoblin.Location = new System.Drawing.Point(539, 32);
+            this.labelGoblin.Location = new System.Drawing.Point(589, 32);
             this.labelGoblin.Name = "labelGoblin";
             this.labelGoblin.Size = new System.Drawing.Size(164, 120);
             this.labelGoblin.TabIndex = 5;
@@ -188,7 +188,7 @@
             // 
             this.labelAnão.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelAnão.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnão.Location = new System.Drawing.Point(369, 32);
+            this.labelAnão.Location = new System.Drawing.Point(215, 32);
             this.labelAnão.Name = "labelAnão";
             this.labelAnão.Size = new System.Drawing.Size(164, 120);
             this.labelAnão.TabIndex = 4;
@@ -198,7 +198,7 @@
             // 
             this.btonElfo.BackColor = System.Drawing.SystemColors.Info;
             this.btonElfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btonElfo.Location = new System.Drawing.Point(199, 155);
+            this.btonElfo.Location = new System.Drawing.Point(210, 446);
             this.btonElfo.Name = "btonElfo";
             this.btonElfo.Size = new System.Drawing.Size(75, 23);
             this.btonElfo.TabIndex = 3;
@@ -210,7 +210,7 @@
             // 
             this.labelElfo.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelElfo.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelElfo.Location = new System.Drawing.Point(199, 32);
+            this.labelElfo.Location = new System.Drawing.Point(215, 323);
             this.labelElfo.Name = "labelElfo";
             this.labelElfo.Size = new System.Drawing.Size(164, 120);
             this.labelElfo.TabIndex = 2;
@@ -251,7 +251,7 @@
             this.Name = "ShowRaces";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RPG_Combate";            
+            this.Text = "RPG_Combate";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
