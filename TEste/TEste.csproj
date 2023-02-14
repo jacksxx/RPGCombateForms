@@ -52,9 +52,9 @@
     <Compile Include="Classes\Guerreiro.cs" />
     <Compile Include="Classes\Mago.cs" />
     <Compile Include="Classes\Clérigo.cs" />
+    <Compile Include="Count.cs" />
     <Compile Include="Dados.cs" />
     <Compile Include="FichaPersonagem\Player.cs" />
-    <Compile Include="Game.cs" />
     <Compile Include="PainelInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +83,23 @@
     <Compile Include="ShowClasses.Designer.cs">
       <DependentUpon>ShowClasses.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowClasses2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowClasses2.Designer.cs">
+      <DependentUpon>ShowClasses2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowRaces.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ShowRaces.Designer.cs">
       <DependentUpon>ShowRaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowRaces2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRaces2.Designer.cs">
+      <DependentUpon>ShowRaces2.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="PainelCombate.resx">
       <DependentUpon>PainelCombate.cs</DependentUpon>
@@ -107,8 +119,14 @@
     <EmbeddedResource Include="ShowClasses.resx">
       <DependentUpon>ShowClasses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ShowClasses2.resx">
+      <DependentUpon>ShowClasses2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShowRaces.resx">
       <DependentUpon>ShowRaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRaces2.resx">
+      <DependentUpon>ShowRaces2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace TEste
 {
-    partial class ShowRaces
+    partial class ShowRaces2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowRaces));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowRaces2));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCheckHumano = new System.Windows.Forms.Label();
             this.btonMinotauro = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
             this.labelAnão = new System.Windows.Forms.Label();
             this.btonElfo = new System.Windows.Forms.Button();
             this.labelElfo = new System.Windows.Forms.Label();
-            this.btonHumano = new System.Windows.Forms.Button();
+            this.btonHuman = new System.Windows.Forms.Button();
             this.labelHumano = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,13 +66,13 @@
             this.panel1.Controls.Add(this.labelAnão);
             this.panel1.Controls.Add(this.btonElfo);
             this.panel1.Controls.Add(this.labelElfo);
-            this.panel1.Controls.Add(this.btonHumano);
+            this.panel1.Controls.Add(this.btonHuman);
             this.panel1.Controls.Add(this.labelHumano);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(783, 558);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // labelCheckHumano
             // 
@@ -94,7 +94,7 @@
             this.btonMinotauro.TabIndex = 14;
             this.btonMinotauro.Text = "Minotauro";
             this.btonMinotauro.UseVisualStyleBackColor = false;
-            this.btonMinotauro.Click += new System.EventHandler(this.btonMinotauro_Click);
+            this.btonMinotauro.Click += new System.EventHandler(this.btonMinotauro_Click_1);
             // 
             // btonLefou
             // 
@@ -106,7 +106,7 @@
             this.btonLefou.TabIndex = 13;
             this.btonLefou.Text = "Lefou";
             this.btonLefou.UseVisualStyleBackColor = false;
-            this.btonLefou.Click += new System.EventHandler(this.btonLefou_Click);
+            this.btonLefou.Click += new System.EventHandler(this.btonLefou_Click_1);
             // 
             // btonHalfling
             // 
@@ -118,7 +118,7 @@
             this.btonHalfling.TabIndex = 12;
             this.btonHalfling.Text = "Halfling";
             this.btonHalfling.UseVisualStyleBackColor = false;
-            this.btonHalfling.Click += new System.EventHandler(this.btonHalfling_Click);
+            this.btonHalfling.Click += new System.EventHandler(this.btonHalfling_Click_1);
             // 
             // btonGoblin
             // 
@@ -130,7 +130,7 @@
             this.btonGoblin.TabIndex = 11;
             this.btonGoblin.Text = "Goblin";
             this.btonGoblin.UseVisualStyleBackColor = false;
-            this.btonGoblin.Click += new System.EventHandler(this.btonGoblin_Click);
+            this.btonGoblin.Click += new System.EventHandler(this.btonGoblin_Click_1);
             // 
             // btonAnão
             // 
@@ -142,7 +142,7 @@
             this.btonAnão.TabIndex = 10;
             this.btonAnão.Text = "Anão";
             this.btonAnão.UseVisualStyleBackColor = false;
-            this.btonAnão.Click += new System.EventHandler(this.btonAnão_Click);
+            this.btonAnão.Click += new System.EventHandler(this.btonAnão_Click_1);
             // 
             // labelMinotauro
             // 
@@ -204,7 +204,7 @@
             this.btonElfo.TabIndex = 3;
             this.btonElfo.Text = "Elfo";
             this.btonElfo.UseVisualStyleBackColor = false;
-            this.btonElfo.Click += new System.EventHandler(this.btonElfo_Click);
+            this.btonElfo.Click += new System.EventHandler(this.btonElfo_Click_1);
             // 
             // labelElfo
             // 
@@ -216,17 +216,17 @@
             this.labelElfo.TabIndex = 2;
             this.labelElfo.Text = "Raça: Elfo\r\nForça: 6\r\nHabilidade: 7\r\nVida: 5\r\nMana: 15\r\n";
             // 
-            // btonHumano
+            // btonHuman
             // 
-            this.btonHumano.BackColor = System.Drawing.SystemColors.Info;
-            this.btonHumano.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btonHumano.Location = new System.Drawing.Point(33, 155);
-            this.btonHumano.Name = "btonHumano";
-            this.btonHumano.Size = new System.Drawing.Size(75, 23);
-            this.btonHumano.TabIndex = 1;
-            this.btonHumano.Text = "Humano";
-            this.btonHumano.UseVisualStyleBackColor = false;
-            this.btonHumano.Click += new System.EventHandler(this.btonHumano_Click);
+            this.btonHuman.BackColor = System.Drawing.SystemColors.Info;
+            this.btonHuman.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btonHuman.Location = new System.Drawing.Point(33, 155);
+            this.btonHuman.Name = "btonHuman";
+            this.btonHuman.Size = new System.Drawing.Size(75, 23);
+            this.btonHuman.TabIndex = 1;
+            this.btonHuman.Text = "Humano";
+            this.btonHuman.UseVisualStyleBackColor = false;
+            this.btonHuman.Click += new System.EventHandler(this.btonHuman_Click_1);
             // 
             // labelHumano
             // 
@@ -237,18 +237,16 @@
             this.labelHumano.TabIndex = 0;
             this.labelHumano.Text = "Raça: Humano\r\nForça: 6\r\nHabilidade: 7\r\nVida: 10\r\nMana: 10\r\n";
             // 
-            // ShowRaces
+            // ShowRaces2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(780, 557);
             this.Controls.Add(this.panel1);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "ShowRaces";
+            this.Name = "ShowRaces2";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RPG_Combate";
@@ -261,10 +259,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelHumano;
-        private System.Windows.Forms.Button btonHumano;
-        private System.Windows.Forms.Button btonElfo;
-        private System.Windows.Forms.Label labelElfo;
+        public System.Windows.Forms.Label labelCheckHumano;
         private System.Windows.Forms.Button btonMinotauro;
         private System.Windows.Forms.Button btonLefou;
         private System.Windows.Forms.Button btonHalfling;
@@ -275,6 +270,9 @@
         private System.Windows.Forms.Label labelHalfings;
         private System.Windows.Forms.Label labelGoblin;
         private System.Windows.Forms.Label labelAnão;
-        public System.Windows.Forms.Label labelCheckHumano;
+        private System.Windows.Forms.Button btonElfo;
+        private System.Windows.Forms.Label labelElfo;
+        private System.Windows.Forms.Button btonHuman;
+        private System.Windows.Forms.Label labelHumano;
     }
 }

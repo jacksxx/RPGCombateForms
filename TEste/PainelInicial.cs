@@ -25,7 +25,7 @@ namespace TEste
         private void button1_Click(object sender, EventArgs e)
         {
             showRaces.Show();
-            this.Close();
+            this.Close();            
         }
     }
 }
