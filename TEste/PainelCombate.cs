@@ -22,9 +22,9 @@ namespace TEste
         public Classe classes1 { get; set; } = new Classe();
         public Classe classes2 { get; set; } = new Classe();
         public Player player1 { get; set; } = new Player();
-        public Player player2 { get; set; } = new Player();
-        public int atkp1 { get; set; }
-        public int atkp2 { get; set; }
+        public Player2 player2 { get; set; } = new Player2();      
+        public int atk1 { get; set; }
+        public int atk2 { get; set; }
         public PainelCombate()
         {
             InitializeComponent();
@@ -32,38 +32,35 @@ namespace TEste
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Refresh();
-            label2.Refresh();
+            
             Application.Exit();            
         }
         private void Form1_Load(object sender, EventArgs e)
-        {
-            
+        {            
             label1_Load();
             label2_Load();
         }
         private void label1_Load()
         {
             player1 = new Player(raças1, classes1);
+            atk1 = player1.Ataque();
             label1.Text = " PLAYER 1 \n" + player1.ToString();
 
         }
         private void label2_Load()
         {
-            player2 = new Player(raças2, classes2);
+            player2 = new Player2(raças2, classes2);
+            atk2 = player2.Ataque2();
             label2.Text = " PLAYER 2 \n" + player2.ToString();
         }
         private void button2_Click(object sender, EventArgs e)
-        {
-            atkp1 = player1.Ataque();
-            atkp2 = player2.Ataque();
+        {            
             label3_Load();
         }
         private void label3_Load()
         {
-
             label3.ResetText();
-            combate();
+            combate(atk1,atk2);
             lb1reset(); lb2reset();
         }
         private void endgame()
@@ -81,11 +78,13 @@ namespace TEste
                 button2.Enabled = false;
             }
         }
-        private void combate()
+        private void combate(int atkp1,int atkp2)
         {
-            
-            int dnvida1 = atkp1 - atkp2;
+            atkp1 = player1.Ataque(); 
+            atkp2 = player2.Ataque2();
+            int dnvida1 = atkp1 - atkp2; 
             int dnvida2 = atkp2 - atkp1;            
+
             if ((atkp1 != null) && (atkp2 != null))
             {
                 if (atkp1 > atkp2)

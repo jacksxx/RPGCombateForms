@@ -1,24 +1,24 @@
 ﻿using TEste.Classes;
 using TEste.Raças;
 
+
 namespace TEste.FichaPersonagem
 {
-    public class Player
+    public class Player2
     {
-        public Dados Dados = new Dados();
         public Dados Dados2 = new Dados();
         public int Força { get; set; }
         public int Habilidade { get; set; }
         public int Vida { get; set; }
         public int Mana { get; set; }
         public string Vantagens { get; set; }
-        public Raça Raças { get; set; } 
-        public Classe Classes { get; set; } 
+        public Raça Raças { get; set; }
+        public Classe Classes { get; set; }
 
-        public Player()
+        public Player2()
         {
         }
-        public Player(Raça raça, Classe classe)
+        public Player2(Raça raça, Classe classe)
         {
             Raças = raça;
             Classes = classe;
@@ -31,11 +31,11 @@ namespace TEste.FichaPersonagem
         }
 
         // Função Ataque
-        public int Ataque()
-        {            
+        public int Ataque2()
+        {
             if (Classes.Name == "Assassino")
             {
-                int dano = Dados.Dices() + Habilidade;
+                int dano = Dados2.Dices() + Habilidade;
                 int danocrit = dano + Força;
                 if (dano == (6 + Habilidade))
                 {
@@ -45,10 +45,10 @@ namespace TEste.FichaPersonagem
                 {
                     return dano;
                 }
-            }            
+            }
             else
             {
-                int dano = Dados.Dices() + Força;
+                int dano = Dados2.Dices() + Força;
                 int danocrit = dano + Habilidade;
                 if (dano == (6 + Força))
                 {
@@ -59,7 +59,7 @@ namespace TEste.FichaPersonagem
                     return dano;
                 }
             }
-        }       
+        }
         //Status por ToString
         public virtual string ToString()
         {
@@ -73,6 +73,6 @@ namespace TEste.FichaPersonagem
                  + $" Vantagens:{Vantagens}";
 
         }
-
     }
 }
+
