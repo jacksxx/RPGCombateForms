@@ -11,8 +11,8 @@ namespace TEste.FichaPersonagem
         public int Vida { get; set; }
         public int Mana { get; set; }
         public string Vantagens { get; set; }
-        public Raça Raças { get; set; }
-        public Classe Classes { get; set; }
+        public Raça Raças { get; set; } 
+        public Classe Classes { get; set; } 
 
         public Player()
         {
@@ -58,8 +58,7 @@ namespace TEste.FichaPersonagem
                     return dano;
                 }
             }
-
-        }
+        }       
         //Status por ToString
         public virtual string ToString()
         {

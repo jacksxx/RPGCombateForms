@@ -9,10 +9,10 @@ namespace TEste
         {
         }
         public int Dices()
-        {
+        {            
             int dice = Dado.Next(1, 7);
             return dice;
-        }
+        }      
 
     }
 }

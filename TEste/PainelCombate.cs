@@ -16,13 +16,15 @@ namespace TEste
 {
 
     public partial class PainelCombate : Form
-    {       
+    {
         public Raça raças1 { get; set; } = new Raça();
         public Raça raças2 { get; set; } = new Raça();
         public Classe classes1 { get; set; } = new Classe();
         public Classe classes2 { get; set; } = new Classe();
         public Player player1 { get; set; } = new Player();
         public Player player2 { get; set; } = new Player();
+        public int atkp1 { get; set; }
+        public int atkp2 { get; set; }
         public PainelCombate()
         {
             InitializeComponent();
@@ -30,70 +32,99 @@ namespace TEste
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            label1.Refresh();
+            label2.Refresh();
+            Application.Exit();            
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            player1 = new Player(raças1, classes1);
-            player2 = new Player(raças2, classes2);
+            
             label1_Load();
             label2_Load();
         }
         private void label1_Load()
         {
+            player1 = new Player(raças1, classes1);
             label1.Text = " PLAYER 1 \n" + player1.ToString();
+
         }
         private void label2_Load()
         {
+            player2 = new Player(raças2, classes2);
             label2.Text = " PLAYER 2 \n" + player2.ToString();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            button2 = (Button)sender;
-            button2.Enabled = false;
-            player1.Ataque();
+            atkp1 = player1.Ataque();
+            atkp2 = player2.Ataque();
+            label3_Load();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            button3 = (Button)sender;
-            button3.Enabled = false;
-            player2.Ataque();
-        }
-
         private void label3_Load()
         {
+
             label3.ResetText();
-            if ((button2.Enabled == false) && (button3.Enabled == false))
+            combate();
+            lb1reset(); lb2reset();
+        }
+        private void endgame()
+        {
+            if (player1.Vida <= 0)
             {
-                int atkP1 = player1.Ataque();
-                int atkP2 = player2.Ataque();
-                if (atkP1 > atkP2)
+                label3.ResetText();
+                label3.Text = "******PLAYER 2 VENCEDOR*****";
+                button2.Enabled = false;
+            }
+            else if (player2.Vida <= 0)
+            {
+                label3.ResetText();
+                label3.Text = "******PLAYER 1 VENCEDOR*****";
+                button2.Enabled = false;
+            }
+        }
+        private void combate()
+        {
+            
+            int dnvida1 = atkp1 - atkp2;
+            int dnvida2 = atkp2 - atkp1;            
+            if ((atkp1 != null) && (atkp2 != null))
+            {
+                if (atkp1 > atkp2)
                 {
-                    int dnvida = atkP1 - atkP2;
-                    player2.Vida = player2.Vida - dnvida;
-                    label3.Text = "PLAYER 1 ATACOU ";
-                    if (atkP1 >= 19)
+                    player2.Vida = player2.Vida - dnvida1;
+                    label3.Text = "Player 1 Ataque: " + atkp1 + "  - Player2 Ataque: " + atkp2 + "\n";
+                    label3.Text += "\n PLAYER 1 ATACOU ";
+                    if (atkp1 >= 19)
                     {
                         label3.Text += "- DANO CRITICO";
                     }
                 }
-                else if (atkP2 > atkP1)
+                else if (atkp2 > atkp1)
                 {
-                    int dnvida = atkP2 - atkP1;
-                    player1.Vida = player1.Vida - dnvida;
-                    label3.Text = "PLAYER 2 ATACOU ";
-                    if (atkP2 >= 19)
+                    player1.Vida = player1.Vida - dnvida2;
+                    label3.Text = "Player 1 Ataque: " + atkp1 + "  - Player2 Ataque: " + atkp2 + "\n";
+                    label3.Text += "\n PLAYER 2 ATACOU ";
+                    if (atkp2 >= 19)
                     {
                         label3.Text += "- DANO CRITICO";
                     }
                 }
                 else
                 {
-                    label3.Text = " EMPATE ";
+                    label3.Text = "Player 1 Ataque: " + atkp1 + "  - Player2 Ataque: " + atkp2 + "\n";
+                    label3.Text += "\n EMPATE ";
                 }
             }
-        }        
+            endgame();
+        }
+        private void lb1reset()
+        {
+            label1.ResetText();
+            label1.Text = " PLAYER 1 \n" + player1.ToString();
+        }
+        private void lb2reset()
+        {
+            label2.ResetText();
+            label2.Text = " PLAYER 2 \n" + player2.ToString();
+        }
     }
 }

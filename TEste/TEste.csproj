@@ -52,7 +52,6 @@
     <Compile Include="Classes\Guerreiro.cs" />
     <Compile Include="Classes\Mago.cs" />
     <Compile Include="Classes\Clérigo.cs" />
-    <Compile Include="Count.cs" />
     <Compile Include="Dados.cs" />
     <Compile Include="FichaPersonagem\Player.cs" />
     <Compile Include="PainelInicial.cs">
