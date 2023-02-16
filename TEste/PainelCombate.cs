@@ -17,40 +17,36 @@ namespace TEste
 
     public partial class PainelCombate : Form
     {
+        public Combate combate { get; set; } = new Combate();
         public Raça raças1 { get; set; } = new Raça();
         public Raça raças2 { get; set; } = new Raça();
         public Classe classes1 { get; set; } = new Classe();
         public Classe classes2 { get; set; } = new Classe();
         public Player player1 { get; set; } = new Player();
-        public Player2 player2 { get; set; } = new Player2();      
+        public Player player2 { get; set; } = new Player();
         public int atk1 { get; set; }
         public int atk2 { get; set; }
         public PainelCombate()
         {
-            InitializeComponent();
-
+            InitializeComponent();           
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            Application.Exit();            
+            Application.Exit();
         }
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
+            this.player1 = new Player(raças1, classes1);
+            this.player2 = new Player(raças2, classes2);
             label1_Load();
             label2_Load();
         }
         private void label1_Load()
-        {
-            player1 = new Player(raças1, classes1);
-            atk1 = player1.Ataque();
+        {                                   
             label1.Text = " PLAYER 1 \n" + player1.ToString();
-
         }
         private void label2_Load()
-        {
-            player2 = new Player2(raças2, classes2);
-            atk2 = player2.Ataque2();
+        {                      
             label2.Text = " PLAYER 2 \n" + player2.ToString();
         }
         private void button2_Click(object sender, EventArgs e)
@@ -60,59 +56,56 @@ namespace TEste
         private void label3_Load()
         {
             label3.ResetText();
-            combate(atk1,atk2);
-            lb1reset(); lb2reset();
+            atk1 = player1.Ataque();
+            atk2 = player1.Ataque();
+            combate.Combat(player1, player2, atk1, atk2);
+            combatxt();
+
         }
         private void endgame()
         {
             if (player1.Vida <= 0)
             {
                 label3.ResetText();
-                label3.Text = "******PLAYER 2 VENCEDOR*****";
+                label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "******PLAYER 2 VENCEDOR*****";
                 button2.Enabled = false;
             }
             else if (player2.Vida <= 0)
             {
                 label3.ResetText();
-                label3.Text = "******PLAYER 1 VENCEDOR*****";
+                label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "******PLAYER 1 VENCEDOR*****";
                 button2.Enabled = false;
             }
         }
-        private void combate(int atkp1,int atkp2)
+        private void combatxt()
         {
-            atkp1 = player1.Ataque(); 
-            atkp2 = player2.Ataque2();
-            int dnvida1 = atkp1 - atkp2; 
-            int dnvida2 = atkp2 - atkp1;            
-
-            if ((atkp1 != null) && (atkp2 != null))
+            if (atk1 > atk2)
             {
-                if (atkp1 > atkp2)
+                label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "\n PLAYER 1 ATACOU ";
+                if (atk1 >= 19)
                 {
-                    player2.Vida = player2.Vida - dnvida1;
-                    label3.Text = "Player 1 Ataque: " + atkp1 + "  - Player2 Ataque: " + atkp2 + "\n";
-                    label3.Text += "\n PLAYER 1 ATACOU ";
-                    if (atkp1 >= 19)
-                    {
-                        label3.Text += "- DANO CRITICO";
-                    }
-                }
-                else if (atkp2 > atkp1)
-                {
-                    player1.Vida = player1.Vida - dnvida2;
-                    label3.Text = "Player 1 Ataque: " + atkp1 + "  - Player2 Ataque: " + atkp2 + "\n";
-                    label3.Text += "\n PLAYER 2 ATACOU ";
-                    if (atkp2 >= 19)
-                    {
-                        label3.Text += "- DANO CRITICO";
-                    }
-                }
-                else
-                {
-                    label3.Text = "Player 1 Ataque: " + atkp1 + "  - Player2 Ataque: " + atkp2 + "\n";
-                    label3.Text += "\n EMPATE ";
+                    label3.Text += "- DANO CRITICO";
                 }
             }
+            else if (atk2 > atk1)
+            {
+                label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "\n PLAYER 2 ATACOU ";
+                if (atk2 >= 19)
+                {
+                    label3.Text += "- DANO CRITICO";
+                }
+            }
+            else
+            {
+                label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "\n EMPATE ";
+            }
+            lb1reset();
+            lb2reset();
             endgame();
         }
         private void lb1reset()
@@ -124,6 +117,6 @@ namespace TEste
         {
             label2.ResetText();
             label2.Text = " PLAYER 2 \n" + player2.ToString();
-        }
+        }        
     }
 }

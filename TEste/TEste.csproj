@@ -53,8 +53,8 @@
     <Compile Include="Classes\Mago.cs" />
     <Compile Include="Classes\Clérigo.cs" />
     <Compile Include="Dados.cs" />
+    <Compile Include="FichaPersonagem\Combate.cs" />
     <Compile Include="FichaPersonagem\Player.cs" />
-    <Compile Include="FichaPersonagem\Player2.cs" />
     <Compile Include="PainelInicial.cs">
       <SubType>Form</SubType>
     </Compile>

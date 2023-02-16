@@ -5,8 +5,7 @@ namespace TEste.FichaPersonagem
 {
     public class Player
     {
-        public Dados Dados = new Dados();
-        public Dados Dados2 = new Dados();
+        public Dados Dados = new Dados();        
         public int Força { get; set; }
         public int Habilidade { get; set; }
         public int Vida { get; set; }
