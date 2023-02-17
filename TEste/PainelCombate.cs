@@ -64,10 +64,12 @@ namespace TEste
         }
         private void endgame()
         {
+            button1.Enabled = true;
             if (player1.Vida <= 0)
             {
                 label3.ResetText();
                 label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "\n Dano:  " + (atk2 - atk1) + "\n";
                 label3.Text += "******PLAYER 2 VENCEDOR*****";
                 button2.Enabled = false;
             }
@@ -75,6 +77,7 @@ namespace TEste
             {
                 label3.ResetText();
                 label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "\n Dano:  " + (atk1 - atk2) + "\n";
                 label3.Text += "******PLAYER 1 VENCEDOR*****";
                 button2.Enabled = false;
             }
@@ -84,6 +87,7 @@ namespace TEste
             if (atk1 > atk2)
             {
                 label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "\n Dano:  " + (atk1 - atk2) + "\n";
                 label3.Text += "\n PLAYER 1 ATACOU ";
                 if (atk1 >= 19)
                 {
@@ -93,6 +97,7 @@ namespace TEste
             else if (atk2 > atk1)
             {
                 label3.Text = "Player 1 Ataque: " + atk1 + "  - Player 2 Ataque: " + atk2 + "\n";
+                label3.Text += "\n Dano:  " + (atk2 - atk1) + "\n";
                 label3.Text += "\n PLAYER 2 ATACOU ";
                 if (atk2 >= 19)
                 {
